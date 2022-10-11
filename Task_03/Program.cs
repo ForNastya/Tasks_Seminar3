@@ -1,9 +1,13 @@
 ﻿// Написать программу вычисления произведения чисел от 1 до N
-Console.WriteLine("Введите любое число");
-int n = int.Parse(Console.ReadLine());
-int result = 0;
-for (int i = 1; i<=n; i++)
+Console.WriteLine("Введите число N: ");
+int number = int.Parse(Console.ReadLine());
+int factorial(int num)
 {
-    result += i;
+    int result = 1;
+    for (int i = 1; i <= num; i++)
+    {
+        result = result * i;
+    }
+    return result;
 }
-Console.WriteLine(result);
+Console.WriteLine(factorial(number));
