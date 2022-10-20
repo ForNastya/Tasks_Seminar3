@@ -1,9 +1,19 @@
 ﻿// Показать кубы чисел, заканчивающихся на четную цифру
-int[] numbers = new int[]{2,7,4,1,9,11};
-for (int i=0; i<number.Lenght; i++)
+string KubNum(int[] array)
 {
-    int number = numbers[i];
-    int cube = (int)Match.Pow(number, 3);
-    if (cube % 2 ==)
-            Console.WriteLine("Куб числа " + number + "равен" + cube + "и заканчивается на четную цифру");
+    string result = string.Empty;
+    int kv = 3;
+    int tmp = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        tmp = Convert.ToInt32(Math.Pow(array[i], kv));
+
+        if (tmp % 2 == 0) result += tmp + " ";
+    }
+
+
+    return result;
 }
+
+int[] KubArray = TableOfSquares(12);
+Console.WriteLine(KubNum(KubArray));
